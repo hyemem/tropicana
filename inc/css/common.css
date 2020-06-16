@@ -1,0 +1,391 @@
+/*--------------------CSS 기본 설정-----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+}
+
+.hidden {
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+    z-index: 99999;
+}
+
+/*--------------------폰트 설정-----------------------*/
+header,
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #555;
+    letter-spacing: -0.4px;
+}
+
+/*-----------section 너비값, 포지션값 설정----------------------*/
+
+header,
+body {
+    width: 100%;
+}
+
+section {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/*-------------------헤더영역 시작---------------------*/
+
+#header_wrap {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 800;
+}
+
+
+#header_wrap.selected {
+    background: #349D1C;
+}
+
+header {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 70px;
+    margin-top: 10ox;
+
+}
+
+
+/*<!-- 로고 삽입 -->*/
+header #logo {
+    position: relative;
+    width: 114px;
+    height: 70px;
+    top: 0;
+    left: 2%;
+    overflow: hidden;
+}
+
+header #logo img {
+    position: absolute;
+    top: 0;
+}
+
+header a {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-- 메인 메뉴바   --*/
+header #main_nav {
+    position: absolute;
+    width: 56%;
+    height: 70px;
+    right: 25%;
+    top: 0;
+    z-index: 100;
+}
+
+header #main_nav #main_menu {
+    width: 100%;
+    height: 100%;
+}
+
+header #main_menu > li > a {
+    color: white;
+    font-size: 1.125em;
+    letter-spacing: 0.7px;
+}
+
+header #main_menu li {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+#main_menu > li ol {
+    position: absolute;
+    width: 25%;
+    z-index: 150;
+    display: none;
+    background: lightgray;
+}
+
+#main_menu li ol li {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+#main_menu li ol li a {
+    color: #333;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+
+#main_menu li ol li a:focus,
+#main_menu li ol li a:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+
+
+/*--퀵메뉴 아이콘--*/
+header #quick_menu {
+    position: absolute;
+    top: 0;
+    width: 12%;
+    right: 7%;
+}
+
+header #quick_menu li {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+
+
+/*--모바일 메뉴--*/
+#mobile_menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 950px;
+    background: #eaeaed;
+    top: 0;
+    left:100%;
+    z-index: 300;
+}
+
+#mobilemenu_bg{
+    width: 100%;
+    height: 100%;
+}
+
+#mobilemenu_bg p{
+    background: green;
+    padding: 100px 5% 50px;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;   
+}
+
+#mobile_menu #toggle_btn {
+    position: fixed;
+    width: 40px;
+    height: 50px;
+    top: 10px;
+    right: 1%;
+}
+
+#mobile_menu #toggle_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+#toggle_btn span {
+    background: white;
+    width: 40px;
+    height: 3px;
+    display: block;
+    margin: 11px 0;
+    border-radius: 10px;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.m_stick.selected {
+    opacity: 0;
+}
+
+.t_stick.selected {
+    -webkit-transform: translateY(14px) rotate(45deg);
+    -moz-transform: translateY(14px) rotate(45deg);
+    -ms-transform: translateY(14px) rotate(45deg);
+    -o-transform: translateY(14px) rotate(45deg);
+    transform: translateY(14px) rotate(45deg);
+}
+
+.b_stick.selected {
+    -webkit-transform: translateY(-14px) rotate(-45deg);
+    -moz-transform: translateY(-14px) rotate(-45deg);
+    -ms-transform: translateY(-14px) rotate(-45deg);
+    -o-transform: translateY(-14px) rotate(-45deg);
+    transform: translateY(-14px) rotate(-45deg);
+}
+
+/*모바일 메뉴 리스트 시작*/
+#list_wrap{
+    width: 100%;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+#mobilemenu_list {
+    width: 100%;
+    height: 100%;
+}
+
+#mobilemenu_list li{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #666;
+    box-sizing: border-box;
+    display: block;
+}
+
+#mobilemenu_list>li a{
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+#mobilemenu_list>li>.moblie_icon{
+    position: absolute;
+    top: 21px;
+    right: 5%;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+#mobilemenu_list>li>.moblie_icon.open{
+    transform: rotate(180deg);
+}
+
+
+#mobilemenu_list li>ol{
+    display: none;
+}
+
+#mobilemenu_list ol li{
+    background: lightgray;
+}
+
+
+#mobilemenu_list li>ol>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+}
+
+/*------------------푸터(footer)-------------------*/
+#footer_wrap {
+    width: 100%;
+    background: #f7f5f5;
+}
+
+footer {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+
+footer img {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+footer #footer_txt1 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*반응형*/
+@media screen and (min-width:768px) and (max-width:1199px){
+    body,header{ width:100%; font-size:14px;}
+    section{ width:96%; }
+    
+    /*--------------헤더영역 시작--------------*/   
+    header nav{ display: none;}
+    #quick_menu{ display: none; }
+
+
+    /*--------------햄버거 메뉴 버튼--------------*/   
+    #mobile_menu{display: block;}
+
+    /*----------푸터 영역------------*/   
+    
+    #content6{ height: 630px;}
+    #footer_wrap{width:100%;}
+    footer{ width:98%; padding: 50px 0;}
+    footer img{width: 100px; height: 40px;}
+}
+
+
+@media screen and (max-width:767px){
+    body,header{ width:100%; font-size:13px;}
+    section{ width:96%; }
+
+    /*--------------헤더영역 시작--------------*/
+    
+    header nav{ display: none;}
+    #quick_menu{ display: none; }
+    
+/*----------햄버거 메뉴 아이콘----------*/
+    
+    #mobile_menu{display: block;}
+    
+    /*------------------푸터(footer)-------------------*/
+    #footer_wrap{width:100%;}
+    footer{ width:98%; padding: 30px 20px; box-sizing: border-box;}
+    footer img{width:55px; height: 24px; margin-bottom: 10px;}
+}
+
+@media screen and (max-width:480px){
+    
+    body,header{ width:100%; font-size:12px;}
+    section{ width:96%; }
+
+    /*--------------헤더영역 시작--------------*/
+    
+    header nav{ display: none;}
+    #quick_menu{ display: none; }
+    
+/*----------햄버거 메뉴 아이콘----------*/
+    
+    #mobile_menu #toggle_btn{display: block;}
+
+    /*------------------푸터(footer)-------------------*/
+    #footer_wrap{width:100%;}
+    footer{ width:98%; padding: 30px 20px; box-sizing: border-box;}
+    footer img{width:55px; height: 24px; margin-bottom: 10px;}
+}
