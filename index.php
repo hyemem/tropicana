@@ -17,7 +17,6 @@
 <? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/header.html" ?>
 
     <!-------------------메인비주얼 시작--------------------->
-
     <!--------물결 배경---------->
     <div id="wave_bg">
         <div class="wave water"></div>
@@ -77,7 +76,6 @@
         <section id="content2">
             <!--------콘텐츠2 제목 시작-------->
             <div class="con_txt">
-
                 <!--콘텐츠2 서브 제목-->
                 <p class="con_subtit">CHOICE YOUR FAVORITE!</p>
 
@@ -179,8 +177,6 @@
                     <p class="product_txt2">망고</p>
                 </li>
             </ul>
-
-
         </section>
 
 
@@ -288,4 +284,3 @@
     </section>
 
     <? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/footer.html" ?>
-</html>

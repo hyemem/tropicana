@@ -260,6 +260,7 @@ header #quick_menu li {
 #mobilemenu_list>li a{
     display: block;
     width: 100%;
+    height: 60px;
     line-height: 60px;
     font-size: 1.3em;
     font-weight: 500;

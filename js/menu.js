@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(function() {
     
     var $hw  //헤더 배경 
     var $header //헤더
@@ -9,7 +9,6 @@ $(window).load(function () {
     var $subMenuLi //서브메뉴 항목 (li)
     var toggle //햄버거 메뉴
     var on_off=false;//모바일 메뉴 닫힘 상태
-    
     
     
     menuInit();
@@ -30,19 +29,18 @@ $(window).load(function () {
         $subMenuA = $subMenuLi.children("a");  // 서브메뉴 a
         toggle = $("#toggle_btn a"); //햄버거 메뉴
     
-    }
+    } 
     
     
     function hwBgShow(){ // header wrap 배경 생성
-        $hw.addClass('selected');
-        $logo.css({'top':'-70px'});
+        $hw.addClass('selected');//배경생성
+        $logo.css({'top':'-70px'}); //흰색 로고로 변경
     }
+
     
     function hwBgHide(){ // header wrap 배경 제거
-        if($(window).scrollTop()>0){
-        // 스크롤이 0이상이거나, toggle버튼이 눌린 상태라면,
-            $hw.addClass('selected');
-            $logo.css({'top':'-70px'});
+        if($(window).scrollTop()>0){ //스크롤이 0 이상이면,
+            hwBgShow();
         }
         else{
             $hw.removeClass('selected');
@@ -54,8 +52,8 @@ $(window).load(function () {
     function menuShow() {//서브메뉴 생성
         $(this).next().stop().slideDown(700); 
     }
-
     
+
     function menuHide(){//서브메뉴 제거
         $(this).children('ol').stop().slideUp(700); 
     }
@@ -64,6 +62,7 @@ $(window).load(function () {
     function focusHide(){ //포커스아웃 서브메뉴 제거
         $subMenu.stop().slideUp(700);
     }
+    
     
     function scrollHeader(){
         if($(window).scrollTop()>0){
@@ -76,12 +75,13 @@ $(window).load(function () {
     //모바일 전체 메뉴 애니메이션
     function mobileMenu(e){
         e.preventDefault();
-        
+
         on_off =! on_off; // 초기값이 false이므로 true가 됨
         
+
         if(on_off){//모바일 메뉴가 닫힌 상태라면(on_off가 true면)
             $("#mobile_menu").animate({'left':0},700,"easeOutCubic");
-            $(this).children().addClass('selected');
+            $(this).children().addClass('selected'); //삼선
             $('body').css({'overflow':'hidden'});
             
             
